@@ -5,4 +5,4 @@ dbConfig = {'host': '192.99.149.208',
          'passwd': '68MDQ3xz9iRE',
          'db': 'shubhams_Task'}
 
-use_anonymous = True
+# use_anonymous = True

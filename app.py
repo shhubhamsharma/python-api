@@ -1,6 +1,5 @@
 from flask import Flask
-from flask_restful import Resource,Api
-from json import dumps
+from flask_restful import Api
 from flask_cors import CORS, cross_origin
 from classes.GetData import GetData
 from classes.GetUniqueID import GetDataUnique
@@ -23,9 +22,6 @@ api.add_resource(GetPlatform,'/getplatform','/getplatform')
 
 api.add_resource(GetDataUnique,'/getUnique','/getData')
 api.add_resource(GetDataGroup,'/getGroup','/getGroup')
-
-# 
-# api.add_resource(SetData,'/setData')
 
 if __name__=='__main__':
     app.run(host='0.0.0.0',port=port)
