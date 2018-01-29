@@ -11,6 +11,5 @@ class GetDataGroup(Resource):
         platform= jsonD['platform']
         query="SELECT COUNT(*) AS fragcount,uid,platform FROM `task` WHERE platform='%s' GROUP BY uid ORDER BY uid"%(platform)
         test=connectMySQL(query)
-        print(test)
         result = {'data':json.loads(json.dumps(test, indent=3) )}    
         return result
