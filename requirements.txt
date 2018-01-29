@@ -6,4 +6,5 @@ sqlalchemy
 ast
 pymongo
 redis
+flask_cors
 https://cdn.mysql.com/Downloads/Connector-Python/mysql-connector-python-2.0.4.tar.gz
