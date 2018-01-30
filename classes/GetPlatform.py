@@ -9,6 +9,6 @@ from flask import request
 class GetPlatform(Resource):
     def get(self):
         query="SELECT DISTINCT(platform) FROM task"
-        test=connectMySQL(query)
-        result = {'data':json.loads(json.dumps(test, indent=3) )}    
+        data=connectMySQL(query)
+        result = {'data':json.loads(json.dumps(data, indent=3) )}    
         return result

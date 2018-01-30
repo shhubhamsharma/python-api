@@ -10,6 +10,6 @@ class GetDataUnique(Resource):
         jsonD=request.json['data']
         platform= jsonD['platform']
         query="SELECT DISTINCT(uid) as uid ,COUNT(*) AS ucount FROM task WHERE platform='%s' GROUP BY uid"%(platform)
-        test=connectMySQL(query)
-        result = {'data':json.loads(json.dumps(test, indent=3) )}    
+        data=connectMySQL(query)
+        result = {'data':json.loads(json.dumps(data, indent=3) )}    
         return result
